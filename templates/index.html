@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../static/images/medical-icon-1-60x64.png" type="image/png" sizes="100 x 150">
+
+    <title>Welcome to Radha Polyclinic</title>
+    <style>
+        
+        body{
+            
+            overflow-x: hidden;;
+        }
+    </style>
+
+</head>
+
+<body onload="{{params}}">
+    <nav class="nav" id="home">
+        <div class=" nav-contact">
+            <div>
+                <h4 class="phone"><span><i class="fa fa-phone" aria-hidden="true"></i>
+                    </span>800 123 45 67</h4>
+            </div>
+            <div>
+                <h4 class="location"><span> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </span>Jai Narayan Complex, DESU Street, Mahipalpur, Delhi - 110037
+                </h4>
+            </div>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank">
+                        <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li><a href="https://www.twitter.com" target="_blank">
+                        <span><i class="fa fa-twitter"></i></span>
+                    </a>
+                </li>
+                <li><a href="https://www.instagram.com" target="_blank">
+                        <span><i class="fa fa-instagram"></i></span>
+                    </a>
+                </li>
+                <li><a href="https://www.linkedin.com" target="_blank">
+                        <span><i class="fa fa-linkedin"></i></span>
+                    </a>
+                </li>
+                <li><a href="/logout" target="_blank" onclick="stepout()">
+                    <span><i class="fa fa-sign-out"></i></span>
+                </a>
+            </li>
+            </ul>
+        </div>
+
+
+
+
+        <div id="navBar" class="nav-menu">
+            <div class="logo">
+                <img style="height: 58px; width: 199px; margin-top: 0px; filter: contrast(5);"
+                    src="../static/images/logo3.png" alt="logo">
+            </div>
+            <ul id="menu-items">
+                <li class="menu-item"><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+                <li class="menu-item"><a href="#about"><i class="fa fa-users"></i> About us</a>
+
+                </li>
+                <li class="menu-item"><a href="#departments"><i class="fa fa-medkit"></i> Departments <span><svg
+                                width="1em" height="12px" viewBox="0 0 16 16" class="bi bi-caret-down-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg></span></a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="https://www.who.int/medicines/regulation/ssffc/lab_analysis/en/"
+                                    target="_blank">Laboratory Analysis</a></li>
+                            <li><a href="https://www.chp.edu/our-services/surgery-pediatric"
+                                    target="_blank">Pediatric</a></li>
+                            <li><a href="https://www.who.int/news-room/fact-sheets/detail/rehabilitation"
+                                    target="_blank">Rehabilitation</a></li>
+                            <li><a href="https://www.gsog.com.au/gynaecological-conditions/"
+                                    target="_blank">Gynaecological</a></li>
+                            <li><a href="https://www.facs.org/education/resources/residency-search/specialties/ophthal"
+                                    target="_blank">Ophthalmology</a></li>
+                            <li><a href="https://www.heart.org/en/health-topics/heart-attack/about-heart-attacks/heart-attack-or-sudden-cardiac-arrest-how-are-they-different"
+                                    target="_blank">Cardiac</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="menu-item"><a href="#blogs"><i class="fa fa-rss"></i> Blog<span><svg width="1em"
+                                height="12px" viewBox="0 0 16 16" class="bi bi-caret-down-fill" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg></span></a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#blogs">Oncological Diseases</a></li>
+                            <li><a href="#blogs">Viral Infections</a></li>
+                            <li><a href="#blogs">Nature & Technology</a></li>
+                            <li><a href="#blogs">Physical Rehabilation</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="menu-item"><a href="appointment"><i class="fa fa-pied-piper-pp"></i> Appointments</a>
+                    <!-- <div class="sub-menu">
+                        <ul>
+                            <li><a href="">Under Construction</a></li>
+                            <li><a href="">Typography</a></li>
+                            <li><a href="">Training & Details</a></li>
+                            <li><a href="">Rescue Operation 2020</a></li>
+                        </ul>
+                    </div>  -->
+                </li>
+                <li class="menu-item"><a href="#contactus"><i class="fa fa-question"></i> Contacts</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="tile" style="margin-top: 165px;">
+            <div class="inside-tile">
+                <h4 class="tile-markup">Welcome to Radha Polyclinic</h4>
+                <h1 style="font-weight: bolder; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
+                    class="tile-content">The best specialists of the city expect you</h1>
+                <button class="btn appointment-down"><a href="appointment" target="_blank">MAKE AN
+                        APPOINTMENT</a></button>
+                <button class="btn"><a href="#departments">DEPARTMENTS</a></button>
+            </div>
+        </div>
+
+        <section class="icon-section">
+            <div class="icon-box box1">
+                <img src="../static/images/service-1-34x44.png" alt="">
+
+                <section class="content">
+                    <h3 class="icon-title">Qualified Doctors</h3>
+                    <div class="line"></div>
+                    <p class="icon-content">Experienced and devoted doctors are ready to help you with your problems.
+                    </p>
+                </section>
+            </div>
+            <div class="icon-box box2">
+                <img src="../static/images/service-2-48x34.png" alt="">
+                <section class="content">
+                    <h3 class="icon-title">Emergency Care</h3>
+                    <div class="line"></div>
+                    <p class="icon-content">We are always ready to help when you need urgent help! Our emergency team is
+                        here for you!</p>
+                </section>
+            </div>
+            <div class="icon-box box3">
+                <img src="../static/images/service-3-35x44.png" alt="">
+                <section class="content">
+                    <h3 class="icon-title">24-Hour Service</h3>
+                    <div class="line"></div>
+                    <p class="icon-content">Anytime you need help, you may contact us and our receptionist will make an
+                        appointment for you.</p>
+                </section>
+            </div>
+        </section>
+    </nav>
+
+
+    <section id="about">
+        <div class="about-section">
+            <div class="about-content">
+                <div class="title">About us</div>
+                <h2>Clinic with <span class="emp">innovative</span> approach to treatment</h2>
+                <p>We provide the a wide range of medical services, so every person could have the opportunity to
+                    receive qualitative medical help.</p>
+                <div class="lists">
+                    <ul class="list-marked">
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i><span> Adult and Children's Trauma
+                                Center</span></li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Birthing and Lactation Classes</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Dental and Oral Surgery</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Heart and Vascular Institute</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Interventional Cardiology</li>
+                    </ul>
+                    <ul class="list-marked">
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Ear, Nose and Throat (ENT)</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Cardiac Support Groups</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Plastic Surgery</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i> Pediatric Emergency Care</li>
+                    </ul>
+                </div>
+                <button class="btn read-more-btn"> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5278805/"
+                        target="_blank">READ MORE</a></button>
+            </div>
+            <div class="img">
+                <img src="../static/images/cover-2.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="blogs">
+        <div class="about-section2">
+            <div class="img2">
+                <img src="../static/images/img-3.jpg" alt="">
+            </div>
+            <div class="about-content2">
+                <h2>We carry out various <span class="emp">studies</span> and analysis</h2>
+                <div class="blog">
+                    <h4><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Oncological Diseases</h4>
+                    <p class="details">We are on the leading edge of cancer care, providing the full continuum of cancer
+                        treatments and supportive care services in a single convenient location. Our cancer specialists
+                        are
+                        experts at diagnosing and treating cancer tumors.</p>
+                </div>
+
+                <div class="blog">
+                    <h4><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Viral Infections</h4>
+                    <p class="details">Viral infections generally must run their course, with treatment aimed at easing
+                        symptoms and providing some relief while you’re sick. Sometimes, antiviral medications are
+                        prescribed for specific infections.</p>
+                </div>
+
+                <div class="blog">
+                    <h4><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nature & Technology</h4>
+                    <p class="details">Nowadays people should balance their life between technological progress and
+                        natural
+                        life. Technogenic influence may cause different diseases, including cancer. It’s crucial to
+                        defend
+                        yourself from such affection.</p>
+                </div>
+
+                <div class="blog">
+                    <h4><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Physical Rehabilation</h4>
+                    <p class="details">A specialized rehabilitation team helps patients achieve the highest quality of
+                        life
+                        by preventing disability and improving independence through a multi-disciplinary approach which
+                        includes a lot of types of therapy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="departments">
+        <div class="specifications">
+            <div class="head">
+                <div class="title">Departments</div>
+                <h2>We provide <span class="emp">assistance </span> in various spheres</h2>
+                <a class="refer-link" href="">ALL DEPARTMENTS ></a>
+            </div>
+
+            <div class="icon-container">
+                <div class="icon-box-2">
+                    <div class="content">
+                        <img src="../static/images/medical-icon-1-60x64.png" alt="">
+                        <a class="head-link" style="font-size: 26px; color: black;" href="#">Pediatrics</a>
+                        <p style="font-size: 18px; color: #666666;">Our pediatric unit utilizes state-of-the-art
+                            technology and employs
+                            a team of true experts.</p>
+                    </div>
+                </div>
+                <div class="icon-box-2">
+                    <div class="content">
+                        <img src="../static/images/medical-img-2-64x64.png" alt="">
+                        <a class="head-link" style="font-size: 26px; color: black;" href="#">Neurology</a>
+                        <p style="font-size: 18px; color: #666666;">We utilize the latest advances in neurological
+                            diagnostics and treatment to ensure the best outcomes.</p>
+                    </div>
+                </div>
+                <div class="icon-box-2">
+                    <div class="content">
+                        <img src="../static/images/medical-img-3-82x60.png" alt="">
+                        <a class="head-link" style="font-size: 26px; color: black;" href="#">Urology</a>
+                        <p style="font-size: 18px; color: #666666;">We have expertise in sexual medicine, male and
+                            female
+                            urinary incontinence, erectile dysfunction.</p>
+                    </div>
+                </div>
+                <div class="icon-box-2">
+                    <div class="content">
+                        <img src="../static/images/medical-img-4-44x64.png" alt="">
+                        <a class="head-link" style="font-size: 26px; color: black;" href="#">Cardiology</a>
+                        <p style="font-size: 18px; color:#666666;">Your heart is in the best hands at our
+                            state-of-the-art cardiovascular institute.</p>
+                    </div>
+                </div>
+                <div class="icon-box-2">
+                    <div class="content">
+                        <img src="../static/images/medical-img-5-54x62.png" alt="">
+                        <a class="head-link" style="font-size: 26px; color: black;" href="#">Dental Care</a>
+                        <p style="font-size: 18px; color: #666666;">MedCare offers great dental care including cosmetic
+                            dental implants and emergency care.</p>
+                    </div>
+                </div>
+                <div class="icon-box-2">
+                    <div class="content">
+                        <img src="../static/images/medical-img-6-70x60.png" alt="">
+                        <a class="head-link" style="font-size: 26px; color: black;" href="#">Pulmonology</a>
+                        <p style="font-size: 18px; color: #666666;">Our pulmonary & endoscopic procedures include
+                            bronchoscopy, thoracentesis, and chest tube insertion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="appointment-area">
+        <img src="../static/images/home-img-499x524.png" alt="">
+        <div class="appointment-content">
+            <h2 style="font-size: 42px;">High-class <span class="emp">specialists</span> are ready to help you at any
+                time.</h2>
+            <p style="font-size: 18px; color: #666666">Contact us any suitable way and make an appointment with the
+                doctor whose help you need! Visit us at the scheduled time and get your treatment.</p>
+            <button class=" btn"><a href="appointment" target="_blank">MAKE AN APPOINTMENT</a></button>
+        </div>
+    </section>
+
+    <section class="profile">
+        <div class="profile-head">
+            <div class="title">Our Doctors</div>
+            <h2 style="font-size: 42px; width: 600px;">We have the best <span class="emp">specialists</span> in the area
+            </h2>
+        </div>
+        <div id="doctors-prof">
+            <div class="doctors-prof">
+                <img src="../static/images/team-1-370x460.jpg" alt="">
+                <div class="caption">
+                    <span><a style="font-size: 20px; font-weight: bold;" href="">Dr. Mike Rolson</a></span>
+                    <p style="font-size: 16px; color: #666666" ;>Pediatrician</p>
+                </div>
+            </div>
+            <div class="doctors-prof">
+                <img src="../static/images/team-2-370x460.jpg" alt="">
+                <div class="caption">
+                    <span><a style="font-size: 20px; font-weight: bold;" href="">Dr. Virginia Howard</a></span>
+                    <p style="font-size: 16px; color: #666666" ;>Dentist</p>
+                </div>
+            </div>
+            <div class="doctors-prof">
+                <img src="../static/images/team-3-370x460.jpg" alt="">
+                <div class="caption">
+                    <span><a style="font-size: 20px; font-weight: bold; " href="">Dr. Jason Ramirez</a></span>
+                    <p style="font-size: 16px; color: #666666" ;>Surgeon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="count-area">
+        <div class="count-content">
+            <div class="box-3">
+                <div class="number-count">29</div>
+                <div class="count-title">YEARS OF EXPERIENCE</div>
+            </div>
+            <div class="box-3">
+                <div class="number-count">4017</div>
+                <div class="count-title">SATISFIED PATIENTS</div>
+            </div>
+            <div class="box-3">
+                <div class="number-count">35</div>
+                <div class="count-title">HOSPITAL ROOMS</div>
+            </div>
+            <div class="box-3">
+                <div class="number-count">95</div>
+                <div class="count-title">QUALIFIED DOCTORS</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactus" class="contact">
+        <div class="address-stack">
+            <div class="contact-container">
+                <div class="title">Contact Us</div>
+                <h2 style="font-size: 42px; display: block; width: 600px;">Make an appointment and
+                    <span class="emp">visit our clinic</span></h2>
+            </div>
+            <div class="address-container">
+                <div class="address">
+                    <ul class="contacts-list">
+                        <li id="contact-title">Los Angeles, CA</li>
+                        <li class="list-items">2566 Jim Rosa Lane, Suite 139</li>
+                        <li class="list-items">Los Angeles 94108</li>
+                        <li class="list-items">Email: info@demolink.org</li>
+                        <li class="list-items">Phone:
+                            +88 (0) 101 0000 000</li>
+                    </ul>
+                </div>
+                <div class="address">
+                    <ul class="contacts-list">
+                        <li id="contact-title">San Francisco, CA</li>
+                        <li class="list-items">1314 Fairmont Avenue, Suite 54</li>
+                        <li class="list-items">San Francisco 64723</li>
+                        <li class="list-items">Email: info@demolink.org</li>
+                        <li class="list-items">Phone:
+                            +88 (0) 101 0000 000</li>
+                    </ul>
+                </div>
+                <div class="address">
+                    <ul class="contacts-list">
+                        <li id="contact-title">New York, NY</li>
+                        <li class="list-items">198 West 21th Street, Suite 721</li>
+                        <li class="list-items">New York NY 10010
+                        </li>
+                        <li class="list-items">Email: info@demolink.org</li>
+                        <li class="list-items">Phone:
+                            +88 (0) 101 0000 000</li>
+                    </ul>
+                </div>
+                <div class="address">
+                    <ul class="contacts-list">
+                        <li id="contact-title">Washington, DC</li>
+                        <li class="list-items">Green Hill Road, Suite 195</li>
+                        <li class="list-items">Washington 72847</li>
+                        <li class="list-items">Email: info@demolink.org</li>
+                        <li class="list-items">Phone:
+                            +88 (0) 101 0000 000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <form style="margin-top: 0px;" class="form-container" method="POST" action="/home">
+            <h2 style="font-size: 42px; display: block; width: 250px;">Leave us a <span class="emp">query?</span></h2>
+            <input type="text" name="name" id="inputName" placeholder="Your Name" value="">
+            <input type="text" name="phone" id="inputPhone" placeholder="Phone">
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Submit your query here"></textarea>
+        <button onclick="{{params}}" id="submitquery" class=" btn appointment-down">Submit Query</button>
+            
+        </form>
+    </section>
+
+    
+
+    <section class="footer">
+        <div class="footer-head">
+            <div class="footer-head-div">
+                <div class="search-box">
+                    <input type="email" name="email" id="inputEmail" placeholder="Your Email">
+                    <button class=" subscribe">SUBSCRIBE</button>
+                </div>
+                <ul class="social-lists">
+                    <li><a href="https://www.facebook.com" target="_blank">
+                            <span><i class="fa fa-facebook invert" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.twitter.com" target="_blank">
+                            <span><i class="fa fa-twitter invert"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com" target="_blank">
+                            <span><i class="fa fa-instagram invert" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com" target="_blank">
+                            <span><i class="fa fa-linkedin invert"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="footer-body">
+            <div>
+                <div class="logofooter">
+                    <img style="height: 58px; width: 199px; margin-top: 7px; filter: contrast(5);"
+                        src="../static/images/logo3.png" alt="">
+                </div>
+                <div class="line"></div>
+
+                <ul class="short-para">
+                    <li>Our medical center offers the widest range of services in the area. We strive to provide our
+                        patients with the most high-quality help by top-notch experts in their fields.</li>
+                </ul>
+            </div>
+            <div class="departments-area">
+                <h3>Departments</h3>
+                <div class="line"></div>
+                <ul class="ulist">
+                    <li>Laboratory Analysis</li>
+                    <li>Pediatric</li>
+                    <li>Rehabilitation</li>
+                    <li>Gynaecological</li>
+                    <li>Ophthalmology</li>
+                    <li>Cardiac</li>
+                </ul>
+            </div>
+            <div class="departments-area">
+                <h3>Quick Links</h3>
+                <div class="line"></div>
+                <ul class="ulist">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#contactus">Contact Us</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            <div class="left">
+                <p>&copy; 2020 Radha Polyclinic. All Rights Reserved</p>
+            </div>
+            <div class="right">
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+    </section>
+    <script src="../static/index.js"></script>
+
+</body>
+
+</html>

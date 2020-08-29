@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>LogIn - Radha PolyClinic</title>
+    <style>
+      body{
+          background-color: rgb(194, 204, 204);
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <form style="width: 20%; margin: auto; margin-top: 15%;" class="" method="POST" action="/login">
+
+      <img style="height: 65px;
+      width: 218px;
+      margin-top: 0px;
+      filter: contrast(5);
+      margin-bottom: 20px;
+      margin-left: 65px;"
+                    src="../static/images/logo3.png" alt="logo">
+      <div class="form-group">
+        
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+        
+      </div>
+      <div class="form-group">
+        
+        <input type="password" class="form-control" id="password" name="passw" placeholder="Password">
+      </div>
+      <!-- <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+      </div> -->
+    <button onclick="{{params}}" type="submit" class="btn btn-secondary col">Log In</button>
+      <div class="my-2">New here?<a href="/register"> Register yourself</a></div>
+    </form>
+    
+    
+    <script src="../static/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../static/images/service-1-34x44.png" type="image/png" sizes="100 x 150">
+    <title>Make Appointment| Radha Polyclinic</title>
+    <style>
+        body::before {
+            height: 110vh;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        nav {
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body >
+    <nav class="nav" id="home">
+        <div id="navBar" class="nav-menu">
+            <div class="logo">
+                <img style="height: 58px; width: 199px; margin-top: 0px; filter: contrast(5);"
+                    src="../static/images/logo3.png" alt="logo">
+            </div>
+            <ul id="menu-items">
+                <li class="menu-item"><a href="/home"><i class="fa fa-home"></i> Home</a></li>
+                <li class="menu-item"><a href="#about"><i class="fa fa-users"></i> About us</a>
+
+                </li>
+                <li class="menu-item"><a href="#departments"><i class="fa fa-medkit"></i> Departments <span><svg
+                                width="1em" height="12px" viewBox="0 0 16 16" class="bi bi-caret-down-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg></span></a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="https://www.who.int/medicines/regulation/ssffc/lab_analysis/en/"
+                                    target="_blank">Laboratory Analysis</a></li>
+                            <li><a href="https://www.chp.edu/our-services/surgery-pediatric"
+                                    target="_blank">Pediatric</a></li>
+                            <li><a href="https://www.who.int/news-room/fact-sheets/detail/rehabilitation"
+                                    target="_blank">Rehabilitation</a></li>
+                            <li><a href="https://www.gsog.com.au/gynaecological-conditions/"
+                                    target="_blank">Gynaecological</a></li>
+                            <li><a href="https://www.facs.org/education/resources/residency-search/specialties/ophthal"
+                                    target="_blank">Ophthalmology</a></li>
+                            <li><a href="https://www.heart.org/en/health-topics/heart-attack/about-heart-attacks/heart-attack-or-sudden-cardiac-arrest-how-are-they-different"
+                                    target="_blank">Cardiac</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="menu-item"><a href="#blogs"><i class="fa fa-rss"></i> Blog<span><svg width="1em"
+                                height="12px" viewBox="0 0 16 16" class="bi bi-caret-down-fill" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg></span></a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#blogs">Oncological Diseases</a></li>
+                            <li><a href="#blogs">Viral Infections</a></li>
+                            <li><a href="#blogs">Nature & Technology</a></li>
+                            <li><a href="#blogs">Physical Rehabilation</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="menu-item"><a href="/appointment"><i class="fa fa-pied-piper-pp"></i> Appointments</a>
+                </li>
+                <li class="menu-item"><a href="#contactus"><i class="fa fa-question"></i> Contacts</a></li>
+            </ul>
+        </div>
+
+
+        <section>
+            <form class="form-container appointment-pg" method="POST" action="/appointment">
+
+                <h2 style="font-size: 42px; display: block; width: auto; margin-top: 70px;">MAKE AN <span
+                        class="emp">APPOINTMENT</span>
+                </h2>
+                <input type="text" name="name" id="inputName" placeholder="Your Name" value="">
+                <input type="text" name="phone" id="inputPhone" placeholder="Phone">
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Your Message"></textarea>
+                <input type="date" name="date" id="date" placeholder="DD-MM-YYYY">
+                <input type="time" name="time" id="time" placeholder="HH:MM:SS">
+                <button onsubmit="{{params}}" type="submit" id="makeAppointment" class=" btn appointment-down">MAKE AN
+                    APPOINTMENT</button>
+                <!-- <button id="showAllAppointments" class=" btn appointment-down">SHOW ASSIGNED APPOINTMENTS</button> -->
+            </form>
+        </section>
+
+
+    </nav>
+
+
+
+
+
+
+    <!-- This division contain a modal window -->
+    <div id="modal">
+        <h1>All Appointments enlisted here. Check for free slot!</h1>
+        <span id="close" class="close">&times</span>
+        <div id="modal-content">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Name of Patient</th>
+                        <th>Contact</th>
+                        <th>Message</th>
+                        <th>Time of Meeting</th>
+                        <th>Date assigned</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section class="footer">
+        <div class="footer-head">
+            <div class="footer-head-div">
+                <div class="search-box">
+                    <input type="email" name="email" id="inputEmail" placeholder="Your Email">
+                    <button class=" subscribe">SUBSCRIBE</button>
+                </div>
+                <ul class="social-lists">
+                    <li><a href="https://www.facebook.com" target="_blank">
+                            <span><i class="fa fa-facebook invert" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.twitter.com" target="_blank">
+                            <span><i class="fa fa-twitter invert"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com" target="_blank">
+                            <span><i class="fa fa-instagram invert" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com" target="_blank">
+                            <span><i class="fa fa-linkedin invert"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="footer-body">
+            <div>
+                <div class="logofooter">
+                    <img style="height: 58px; width: 199px; margin-top: 7px; filter: contrast(5);"
+                        src="../static/images/logo3.png" alt="">
+                </div>
+                <div class="line"></div>
+
+                <ul class="short-para">
+                    <li>Our medical center offers the widest range of services in the area. We strive to provide our
+                        patients with the most high-quality help by top-notch experts in their fields.</li>
+                </ul>
+            </div>
+            <div class="departments-area">
+                <h3>Departments</h3>
+                <div class="line"></div>
+                <ul class="ulist">
+                    <li>Laboratory Analysis</li>
+                    <li>Pediatric</li>
+                    <li>Rehabilitation</li>
+                    <li>Gynaecological</li>
+                    <li>Ophthalmology</li>
+                    <li>Cardiac</li>
+                </ul>
+            </div>
+            <div class="departments-area">
+                <h3>Quick Links</h3>
+                <div class="line"></div>
+                <ul class="ulist">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#contactus">Contact Us</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            <div class="left">
+                <p>&copy; 2020 Radha Polyclinic. All Rights Reserved</p>
+            </div>
+            <div class="right">
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../static/index.js"></script>
+</body>
+
+</html>

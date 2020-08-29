@@ -87,6 +87,6 @@ def home():
 
 if __name__ == "__main__":
     app.secret_key = b';t\xa5\xab\xd6\xa3\xb0dr\xf2F\xc1\x03\xba\xac#'
-    app.run(debug=True)
+    app.run()
     
 

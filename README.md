@@ -6,4 +6,4 @@ In this project, i made an attempt to build an informational website for a Polyc
 It includes making the source files to the right repository path and then just run the apllication
 
 # Development
-As of now, this of mine not full-fleged, development of it is still going on. Once i get done with this. I"ll write a full review readme.md and add requirements.txt and license.txt file too. Until that time comes by, you can view my code and implementation.
+As of now, this of mine not full-fleged, development of it is still going on. Once i get done with this. I"ll write a full informational readme.md and add requirements. txt file too about the modules and packages i used during development. Until that , you can view my just view my code and implementation.
